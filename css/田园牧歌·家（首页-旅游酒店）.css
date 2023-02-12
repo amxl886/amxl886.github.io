@@ -1,0 +1,371 @@
+/* 背景底色 */
+body {
+    background-color: #f1f5f3;
+}
+
+/* 顶部透明栏 */
+.header {
+    width: 100vw;
+    height: 17.52vw;
+    /* 设置圆角 */
+    border-radius: 0 0 2vw 2vw;
+    /* 渐变 */
+    background-image: repeating-linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, 1));
+    /* 透明度 */
+    opacity: 0.8;
+    /* 阴影 */
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .2);
+    /* 固定定位 */
+    position: fixed;
+    top: 0;
+    /* 设置层级 */
+    z-index: 9999;
+}
+
+.return {
+    /* 设置为块级元素 */
+    display: block;
+    /* 绝对定位 */
+    position: absolute;
+    left: 4vw;
+    top: 5vw;
+    /* 设置层级 */
+    z-index: 9999;
+}
+
+/* 增加icon */
+.return>p::before {
+    content: '\e600';
+    font-family: 'iconfont';
+    font-size: 7vw;
+    color: #4A4848;
+}
+
+/* 搜索框设置 */
+.search {
+    width: 60vw;
+    height: 10vw;
+    /* flex布局 */
+    display: flex;
+    /* 相对定位 */
+    position: relative;
+    top: 4.5vw;
+    left: 15vw;
+}
+
+.search-inp {
+    /* 设置属性为IE元素盒 */
+    box-sizing: border-box;
+    width: 60vw;
+    height: 8vw;
+    margin: 0 auto;
+    padding: 0 10vw;
+    border: none;
+    background-color: #F0F0F0;
+    border-radius: 10vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 搜索框容器 */
+.search-wrapper .search-btn {
+    width: 8vw;
+    height: 6vw;
+    border: none;
+    background-color: #F0F0F0;
+    color: #A6A6A6;
+    font-size: 4vw;
+    /* 设置层级 */
+    z-index: 9999;
+    /* 绝对定位 */
+    position: absolute;
+    top: 1vw;
+    left: 2vw;
+}
+
+.banner {
+    width: 96vw;
+    height: 60vw;
+    margin: 2vw 2vw auto auto;
+    /* 相对定位 */
+    position: relative;
+}
+
+.hotel {
+    width: 38vw;
+    height: 58vw;
+    /* 绝对定位 */
+    position: absolute;
+    top: 1vw;
+    left: 2vw;
+}
+
+/* 酒店图片设置 */
+.hotel img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2vw;
+}
+
+
+.hotel-msg {
+    width: 55vw;
+    height: 10vw;
+    /* 绝对定位 */
+    position: absolute;
+    top: 2vw;
+    left: 42vw;
+    font-size: 4.2vw;
+    /* 字体加粗 */
+    font-weight: bold;
+}
+
+/* 酒店评分 */
+.hot {
+    width: 10vw;
+    height: 6vw;
+    background-color: #A5D63F;
+    /* 开启绝对定位 */
+    position: absolute;
+    top: 12vw;
+    left: 42vw;
+    border-radius: 10vw;
+    /* 让盒子的右上角的圆角恢复为0 */
+    border-top-right-radius: 0;
+    color: #ffffff;
+    font-size: 4.5vw;
+    /* 字体宽度、高度居中 */
+    line-height: 6vw;
+    text-align: center;
+}
+
+.hot-msg {
+    width: 20vw;
+    height: 6vw;
+    /* 字体宽度、高度居中 */
+    line-height: 6vw;
+    font-size: 3vw;
+    /* 开启绝对定位 */
+    position: absolute;
+    top: 12vw;
+    left: 54vw;
+}
+
+/* 酒店相关介绍 */
+.distance {
+    width: 50vw;
+    height: 6vw;
+    line-height: 6vw;
+    font-size: 3vw;
+    position: absolute;
+    top: 18vw;
+    left: 42vw;
+    color: #383838;
+}
+
+/* 酒店相关介绍 */
+.place {
+    width: 50vw;
+    height: 6vw;
+    line-height: 6vw;
+    font-size: 3vw;
+    position: absolute;
+    top: 23vw;
+    left: 42vw;
+    color: #383838;
+}
+
+/* 酒店相关介绍 */
+.appraise {
+    width: 50vw;
+    height: 6vw;
+    line-height: 6vw;
+    font-size: 3vw;
+    position: absolute;
+    top: 28vw;
+    left: 42vw;
+    color: #383838;
+    display: flex;
+}
+
+/* 消息icon */
+.appraise>p::before {
+    content: '\e641';
+    font-family: 'iconfont';
+    font-size: 5vw;
+    color: #A5D63F;
+}
+
+/* 酒店相关介绍 */
+.cancel {
+    width: 10vw;
+    height: 6vw;
+    line-height: 6vw;
+    font-size: 3vw;
+    position: absolute;
+    top: 45vw;
+    left: 65vw;
+    color: #808080;
+    text-decoration: line-through;
+    text-align: center;
+}
+
+/* 酒店相关介绍 */
+.price {
+    width: 18vw;
+    height: 10vw;
+    line-height: 10vw;
+    font-size: 6vw;
+    position: absolute;
+    top: 42.5vw;
+    left: 74vw;
+    text-align: center;
+    /* 字体渐变颜色 */
+    background-image: linear-gradient(#FF0000, #FF8D1A);
+    /* 以盒子内的文字作为裁剪区域向外裁剪，文字之外的区域都将被裁剪掉 */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* 酒店相关介绍 */
+.cancel-1 {
+    width: 5vw;
+    height: 6vw;
+    line-height: 6vw;
+    font-size: 3vw;
+    position: absolute;
+    top: 45vw;
+    left: 90vw;
+    color: #808080;
+    text-align: center;
+}
+
+/* 酒店相关介绍 */
+.discount {
+    width: 18vw;
+    height: 7vw;
+    line-height: 7vw;
+    font-size: 4vw;
+    position: absolute;
+    top: 52vw;
+    left: 55vw;
+    color: #FF7A7A;
+    text-align: center;
+}
+
+/* 酒店相关介绍 */
+.discount-msg {
+    width: 22vw;
+    height: 7vw;
+    line-height: 7vw;
+    font-size: 3.5vw;
+    position: absolute;
+    top: 52vw;
+    left: 73vw;
+    color: #ffffff;
+    /* 盒子背景渐变 */
+    background-image: repeating-linear-gradient(to right, #FF0000, #FF8D1A);
+    border-radius: 2vw;
+    /* 恢复盒子右上、左下圆角 */
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    display: flex;
+}
+
+.discount-msg-text {
+    margin-left: 1vw;
+}
+
+.discount-msg-icon {
+    /* 开启相对定位 */
+    position: relative;
+}
+
+/* 设置酒店相关介绍和icon容器 */
+.discount-msg-icon a {
+    display: block;
+    width: 5vw;
+    height: 7vw;
+    font-size: 4vw;
+    position: absolute;
+    left: 1vw;
+    line-height: 7vw;
+    text-align: center;
+}
+
+/* 添加右方向icon */
+.a5::before {
+    content: '\e775';
+    font-family: 'iconfont';
+    color: #ffffff;
+}
+
+.footer {
+    width: 100vw;
+    height: 10vw;
+    margin: 0vw auto 15vw auto;
+    line-height: 10vw;
+    text-align: center;
+    color: #808080;
+    font-size: 3.5vw;
+}
+
+/* 底部icon */
+.foot {
+    z-index: 9999;
+    width: 100vw;
+    height: 14vw;
+    backdrop-filter: blur(3px);
+    background: hsla(0, 0%, 70%, 0.4);
+    line-height: 14vw;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+
+}
+
+.icons {
+    width: 100vw;
+    height: 14vw;
+    display: flex;
+    /* 居中 */
+    align-items: center;
+    /* 空白均匀分配到盒子左右 */
+    justify-content: space-around;
+}
+
+.icons a {
+    display: block;
+    width: 10vw;
+    height: 14vw;
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: 10vw;
+}
+
+/* 增添icon */
+.a1::before {
+    content: '\e751';
+    font-family: 'iconfont';
+    color: #808080;
+}
+
+.a2::before {
+    content: '\e75b';
+    font-family: 'iconfont';
+}
+
+.a3::before {
+    content: '\ec3b';
+    font-family: 'iconfont';
+}
+
+.a4::before {
+    content: '\e62f';
+    font-family: 'iconfont';
+}
+
+/* 鼠标移入效果 */
+.icons a:hover {
+    color: #808080;
+}

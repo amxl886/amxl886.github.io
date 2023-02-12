@@ -1,0 +1,372 @@
+/* 背景底色 */
+body {
+    background-color: #f1f5f3;
+}
+
+/* 顶部透明栏 */
+.header {
+    width: 100vw;
+    height: 17.52vw;
+    /* 设置圆角 */
+    border-radius: 0 0 2vw 2vw;
+    /* 渐变 */
+    background-image: repeating-linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, 1));
+    /* 透明度 */
+    opacity: 0.8;
+    /* 阴影 */
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .2);
+    /* 固定定位 */
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+.nav {
+    width: 100vw;
+    height: 15vw;
+    /* 设置相对定位 */
+    position: relative;
+    /* 设置flex布局 */
+    display: flex;
+    margin-top: 16vw;
+}
+
+.submenu-left {
+    /* 使元素变为块元素 */
+    display: block;
+    width: 15vw;
+    height: 11vw;
+    /* 设置为绝对定位 */
+    position: absolute;
+    top: 1.5vw;
+    left: 35vw;
+    /* 设置文字高度居中 */
+    line-height: 12vw;
+    /* 设置文字宽度居中 */
+    text-align: center;
+    /* 调整字体大小 */
+    font-size: 5.6vw;
+    /* 字体颜色 */
+    color: #808080;
+
+}
+
+.submenu-right {
+    /* 使元素变为块元素 */
+    display: block;
+    width: 15vw;
+    height: 11vw;
+    /* 设置为绝对定位 */
+    position: absolute;
+    top: 2vw;
+    left: 52vw;
+    /* 设置文字高度居中 */
+    line-height: 11vw;
+    /* 设置文字宽度居中 */
+    text-align: center;
+    font-size: 7.4vw;
+    /* 设置盒子下边框的大小、颜色 */
+    border-bottom: 2px solid #7CE688;
+}
+
+/* 鼠标移入的效果 */
+.submenu-left:hover {
+    top: 1.9vw;
+    font-size: 7.4vw;
+    color: black;
+}
+
+/* 搜索框 */
+.search {
+    width: 80vw;
+    height: 10vw;
+    display: flex;
+    margin: 0 auto;
+    display: flex;
+    /* 开启元素的相对定位 */
+    position: relative;
+}
+
+.search-inp {
+    /* 消除其余因素影响 */
+    box-sizing: border-box;
+    width: 80vw;
+    height: 8vw;
+    margin: 0 auto;
+    padding: 0 10vw;
+    /* 设置边框 */
+    border: 1px solid #808080;
+    /* 圆角 */
+    border-radius: 2vw;
+    /* 开启绝对定位 */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 搜索框容器 */
+.search-wrapper .search-btn {
+    width: 8vw;
+    height: 6vw;
+    /* 消除边框 */
+    border: none;
+    /* 背景颜色 */
+    background-color: #fff;
+    /* 字体颜色 */
+    color: #A6A6A6;
+    /* 字体大小 */
+    font-size: 4vw;
+    /* 设置层级 */
+    z-index: 9999;
+    /* 开启绝对定位 */
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+}
+
+/* 信息流 */
+.feed {
+    width: 92vw;
+    height: 240vw;
+    margin: 7vw auto 0vw auto;
+    /* 开启相对定位 */
+    position: relative;
+}
+
+/* 信息流1 */
+.list-tab {
+    width: 42vw;
+    height: 76vw;
+    /* 开启绝对定位 */
+    position: absolute;
+    left: 1vw;
+    /* 开启flex布局 */
+    display: flex;
+    /* 自动换行 */
+    flex-wrap: wrap;
+}
+
+/* 信息流3 */
+.list-tab-one {
+    width: 42vw;
+    height: 76vw;
+    position: absolute;
+    top: 67vw;
+    left: 50vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 信息流5 */
+.list-tab-two {
+    width: 42vw;
+    height: 76vw;
+    position: absolute;
+    top: 160vw;
+    left: 1vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 创建图片容器 */
+.tab-news {
+    width: 42vw;
+    height: 62vw;
+    display: block;
+}
+
+/* 设置图片大小、圆角 */
+.tab-news img,
+.tab-news-right img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5vw;
+}
+
+/* 文字 */
+.tab-text {
+    font-size: 3.5vw;
+    color: #383838;
+    margin-left: 1.5vw;
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+}
+
+/* 创建个人信息容器 */
+.tab-up {
+    width: 42vw;
+    height: auto;
+    display: flex;
+}
+
+/* 设置头像容器大小 */
+.tab-up-header {
+    display: block;
+    width: 7.5vw;
+    height: 7.5vw;
+    margin-left: 1.5vw;
+}
+
+/* 设置头像图片大小 */
+.tab-up-header img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10vw;
+}
+
+/* 设置个人信息文字 */
+.tab-up-text {
+    font-size: 3vw;
+    color: #383838;
+    margin-top: 2.5vw;
+    margin-left: 0.5vw;
+}
+
+/* 收藏容器 */
+.collection {
+    width: 20vw;
+    height: 8vw;
+    position: relative;
+}
+
+.iconfont {
+    position: absolute;
+    top: 1.6vw;
+    left: 10vw;
+    color: #C4C4C4;
+}
+
+p.iconfont {
+    font-size: 5vw;
+    cursor: pointer;
+
+}
+
+/* js增加，改变收藏样式 */
+.cs {
+    color: #ec585a;
+}
+
+/* 收藏数字 */
+.collection-text {
+    position: absolute;
+    font-size: 3vw;
+    top: 2.7vw;
+    left: 16vw;
+    color: #808080;
+}
+
+
+/* 信息流2 */
+.list-tab-right {
+    width: 42vw;
+    height: 65vw;
+    position: absolute;
+    left: 50vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 信息流4 */
+.list-tab-right-one {
+    width: 42vw;
+    height: 65vw;
+    position: absolute;
+    top: 80vw;
+    left: 1vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 信息流6 */
+.list-tab-right-two {
+    width: 42vw;
+    height: 65vw;
+    position: absolute;
+    top: 145vw;
+    left: 50vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 内容图片 */
+.tab-news-right {
+    width: 42vw;
+    height: 52vw;
+    display: block;
+}
+
+/* 结尾语 */
+.footer {
+    width: 100vw;
+    height: 10vw;
+    margin: 0vw auto 14vw auto;
+    line-height: 10vw;
+    text-align: center;
+    color: #808080;
+    font-size: 3.5vw;
+}
+
+/* 底部icon容器 */
+.foot {
+    /* 设置层级 */
+    z-index: 9999;
+    width: 100vw;
+    height: 14vw;
+    /* 设置背景模糊 */
+    backdrop-filter: blur(3px);
+    /* 背景颜色 */
+    background: hsla(0, 0%, 70%, 0.4);
+    line-height: 14vw;
+    text-align: center;
+    /* 固定定位 */
+    position: fixed;
+    bottom: 0;
+
+}
+
+/* icon样式 */
+.icons {
+    width: 100vw;
+    height: 14vw;
+    display: flex;
+    /* 居中排列 */
+    align-items: center;
+    /* 空白分布到元素两侧 */
+    justify-content: space-around;
+}
+
+.icons a {
+    display: block;
+    width: 10vw;
+    height: 14vw;
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: 10vw;
+}
+
+/* 引入icon */
+.a1::before {
+    content: '\e751';
+    font-family: 'iconfont';
+}
+
+.a2::before {
+    content: '\e75b';
+    font-family: 'iconfont';
+    color: #808080;
+}
+
+.a3::before {
+    content: '\ec3b';
+    font-family: 'iconfont';
+}
+
+.a4::before {
+    content: '\e62f';
+    font-family: 'iconfont';
+}
+
+/* 鼠标移入icon效果 */
+.icons a:hover {
+    color: #808080;
+}

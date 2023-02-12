@@ -1,0 +1,511 @@
+/* 背景底色 */
+body {
+    background-color: #f1f5f3;
+}
+
+/* 顶部透明栏 */
+.header {
+    width: 100vw;
+    height: 100vw;
+    background-image: url(../img/首图.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /* 圆角 */
+    border-radius: 0 0 15.2vw 15.2vw;
+    box-shadow: 0 6px 4px rgba(0, 0, 0, .25);
+    position: relative;
+}
+
+/* 搜索栏设置 */
+.top-search {
+    width: 100vw;
+    height: 17.52vw;
+    /* 实现毛玻璃效果 */
+    backdrop-filter: blur(3px);
+    background: hsla(0, 0%, 100%, 0.35);
+    border-radius: 0 0 3.50vw 3.50vw;
+    /* flex布局 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 绝对定位 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #fff;
+}
+
+/* 搜索框 */
+.search {
+    width: 78.50vw;
+    height: 8vw;
+    background-color: #fff;
+    border-radius: 9.35vw;
+    /* 相对定位 */
+    position: relative;
+}
+
+.tip {
+    /* 绝对定位 */
+    position: absolute;
+    top: 1vw;
+    left: 2vw;
+}
+
+/* 扫一扫icon */
+.tip>p::before {
+    content: '\e891';
+    /* 设置字体 */
+    font-family: 'iconfont';
+    font-size: 5.84vw;
+    color: #C4C4C4;
+}
+
+.hot {
+    width: 52.57vw;
+    height: 7vw;
+    /* 绝对定位 */
+    position: absolute;
+    top: 0.5vw;
+    left: 8.9vw;
+}
+
+/* 搜索框内文字设置 */
+.hot-text {
+    line-height: 7vw;
+    padding-left: 1.5vw;
+    font-size: 3.50vw;
+    color: #808080;
+    border-left: 0.4vw solid #E5E5E5;
+    /* 绝对定位 */
+    position: absolute;
+    filter: blur(8vw);
+    opacity: 0;
+    animation: biaoti 12s infinite ease-in-out;
+}
+
+/* 搜索框内动态 */
+.hot-text:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.hot-text:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.hot-text:nth-child(3) {
+    animation-delay: 8s;
+}
+
+@keyframes biaoti {
+
+    0%,
+    5%,
+    100% {
+        filter: blur(0vw);
+        opacity: 1;
+    }
+
+    70%,
+    80% {
+        filter: blur(8vw);
+        opacity: 0;
+    }
+}
+
+/* “热门”icon设置 */
+.hot-icon {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 11.7vw;
+    /* 绝对定位 */
+    position: absolute;
+    top: 1vw;
+    left: 36.5vw;
+    background-color: #f8e1e1;
+}
+
+.hot-icon-one {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 11.7vw;
+    position: absolute;
+    top: 1vw;
+    left: 33.5vw;
+    background-color: #f8e1e1;
+}
+
+.hot-icon-two {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 11.7vw;
+    position: absolute;
+    top: 1vw;
+    left: 47.5vw;
+    background-color: #f8e1e1;
+}
+
+.hot-icon-text {
+    line-height: 5vw;
+    color: #ec585a;
+    font-size: 3.5vw;
+    text-align: center;
+}
+
+
+/* 搜索框按钮 */
+.search-btn {
+    width: 12vw;
+    height: 5.9vw;
+    background-color: #7CE688;
+    /* 圆角 */
+    border-radius: 11.7vw;
+    /* 绝对定位 */
+    position: absolute;
+    border: none;
+    top: 1.1vw;
+    right: 1.5vw;
+    font-size: 3.5vw;
+    color: #3f463f;
+}
+
+/* 主图logo */
+.logo {
+    width: 26.63vw;
+    height: 8.17vw;
+    background-image: url(../img/IP\ logo.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /* 绝对定位 */
+    position: absolute;
+    right: 6vw;
+    top: 82vw;
+}
+
+/* 金刚区 */
+.menu {
+    width: 100vw;
+    height: 28.03vw;
+}
+
+/* 金刚区表格样式 */
+.menu-list {
+    width: 100vw;
+    height: 28.03vw;
+    /* flex布局 */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu-list a {
+    display: block;
+    width: 16.5vw;
+    height: 22vw;
+    text-align: center;
+    font-size: 3.5vw;
+}
+
+.menu-list img {
+    width: 16.5vw;
+    height: 16.5vw;
+    border-radius: 5.85vw;
+}
+
+/* 主题介绍 */
+.nav {
+    width: 100vw;
+    height: 65vw;
+    /* flex布局 */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.subnav {
+    /* 设置块级元素 */
+    display: block;
+    width: 42.75vw;
+    height: 65vw;
+    background-image: url(../img/牧场风情.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .5);
+    border-radius: 3vw;
+}
+
+/* 图片标题 */
+.subnav-text {
+    color: #fff;
+    font-size: 5vw;
+    margin-top: 1.5vw;
+    margin-left: 3vw;
+}
+
+.subnav-list {
+    width: 42.75vw;
+    height: 65vw;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.subnav-lists {
+    background-image: url(../img/组团旅游.jpg);
+}
+
+.subnav-listss {
+    background-image: url(../img/旅游酒店.jpg);
+}
+
+.subnav-lists,
+.subnav-listss {
+    display: block;
+    width: 42.75vw;
+    height: 30vw;
+    background-color: #ec585a;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .5);
+    border-radius: 3vw;
+}
+
+/* 底部icon 容器*/
+.foot {
+    /* 层级 */
+    z-index: 9999;
+    width: 100vw;
+    height: 14vw;
+    /* 背景模糊 */
+    backdrop-filter: blur(3px);
+    background: hsla(0, 0%, 70%, 0.4);
+    line-height: 14vw;
+    text-align: center;
+    /* 固定定位 */
+    position: fixed;
+    bottom: 0;
+
+}
+
+/* icon样式 */
+.icons {
+    width: 100vw;
+    height: 14vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.icons a {
+    display: block;
+    width: 10vw;
+    height: 14vw;
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: 10vw;
+}
+
+/* 引入icon */
+.a1::before {
+    content: '\e751';
+    font-family: 'iconfont';
+    color: #808080;
+}
+
+.a2::before {
+    content: '\e75b';
+    font-family: 'iconfont';
+}
+
+.a3::before {
+    content: '\ec3b';
+    font-family: 'iconfont';
+}
+
+.a4::before {
+    content: '\e62f';
+    font-family: 'iconfont';
+}
+
+/* .icons a:active{
+    color: #808080;
+} */
+
+/* 鼠标移入icon效果 */
+.icons a:hover {
+    color: #808080;
+}
+
+.feed {
+    width: 92vw;
+    height: 230vw;
+    margin: 7vw auto 0vw auto;
+    position: relative;
+}
+
+/* 信息流1 */
+.list-tab {
+    width: 42vw;
+    height: 76vw;
+    position: absolute;
+    left: 1vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 信息流3 */
+.list-tab-one {
+    width: 42vw;
+    height: 76vw;
+    position: absolute;
+    top: 67vw;
+    left: 50vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 信息流5 */
+.list-tab-two {
+    width: 42vw;
+    height: 76vw;
+    position: absolute;
+    top: 160vw;
+    left: 1vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* a链接样式 */
+.tab-news {
+    width: 42vw;
+    height: 62vw;
+    display: block;
+}
+
+/* 信息流图片 */
+.tab-news img,
+.tab-news-right img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5vw;
+}
+
+/* 信息流标题 */
+.tab-text {
+    font-size: 3.5vw;
+    color: #383838;
+    margin-left: 1.5vw;
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+}
+
+/* 信息流发布者信息 */
+.tab-up {
+    width: 42vw;
+    height: auto;
+    display: flex;
+}
+
+.tab-up-header {
+    display: block;
+    width: 7.5vw;
+    height: 7.5vw;
+    margin-left: 1.5vw;
+}
+
+/* 信息流发布者头像 */
+.tab-up-header img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10vw;
+}
+
+/* 信息流发布者昵称 */
+.tab-up-text {
+    font-size: 3vw;
+    color: #383838;
+    margin-top: 2.5vw;
+    margin-left: 0.5vw;
+}
+
+/* 信息流2 */
+.list-tab-right {
+    width: 42vw;
+    height: 65vw;
+    position: absolute;
+    left: 50vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 信息流4 */
+.list-tab-right-one {
+    width: 42vw;
+    height: 65vw;
+    position: absolute;
+    top: 80vw;
+    left: 1vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 信息流6 */
+.list-tab-right-two {
+    width: 42vw;
+    height: 65vw;
+    position: absolute;
+    top: 345vw;
+    left: 54vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tab-news-right {
+    width: 42vw;
+    height: 52vw;
+    display: block;
+}
+
+.collection {
+    width: 20vw;
+    height: 8vw;
+    position: relative;
+}
+
+.iconfont {
+    position: absolute;
+    top: 1.6vw;
+    left: 10vw;
+    color: #C4C4C4;
+}
+
+p.iconfont {
+    font-size: 5vw;
+    cursor: pointer;
+}
+
+
+.cs {
+    color: #ec585a;
+}
+
+
+
+.collection-text {
+    position: absolute;
+    font-size: 3vw;
+    top: 2.7vw;
+    left: 16vw;
+    color: #808080;
+}
+
+/* 结尾语 */
+.footer {
+    width: 100vw;
+    height: 10vw;
+    margin: 4vw auto 14vw auto;
+    line-height: 10vw;
+    text-align: center;
+    color: #808080;
+    font-size: 3.5vw;
+}
